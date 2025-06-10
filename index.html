@@ -12,11 +12,11 @@
     <!-- Chosen Palette: Warm Neutrals with Red Accents -->
     <!-- Application Structure Plan: The application is structured as a horizontal, chronological "story-path" or timeline. This design was chosen over a standard vertical scroll to better represent the "journey" aspect of the Zhang family's story. Navigation is handled by a fixed timeline at the bottom, allowing users to jump between key chapters of the narrative (e.g., "Orígenes", "Llegada", "Adaptación", "Casa Zhang", "Identidad", "Legado"). This non-linear exploration encourages user engagement and focuses on the passage of time and key life events, making the story more impactful and easier to digest than a simple text document. -->
     <!-- Visualization & Content Choices: 
-        - Timeline Navigation (HTML/CSS/JS): Goal: Organize/Change. Provides the main interactive structure, guiding the user through the chronological story. Justification: More engaging than scrolling, fits the "journey" theme.
-        - Interactive Cards (HTML/JS): Goal: Inform/Compare. Used for cultural comparisons (China vs. Colombia) and to break down challenges. Justification: Makes dense information digestible and interactive.
-        - Simple Bar Chart (Chart.js): Goal: Change. Visualizes the growth of the "Casa Zhang" restaurant. Justification: Adds a quantitative and visual metric of success to the qualitative narrative. The chart container is fully responsive.
-        - Character Details (HTML/JS Modals): Goal: Inform. Clicking on character names reveals more info. Justification: Adds depth to the story without cluttering the main view.
-        - All elements are implemented using standard web technologies, ensuring accessibility and responsiveness without external dependencies like SVG or Mermaid.
+         - Timeline Navigation (HTML/CSS/JS): Goal: Organize/Change. Provides the main interactive structure, guiding the user through the chronological story. Justification: More engaging than scrolling, fits the "journey" theme.
+         - Interactive Cards (HTML/JS): Goal: Inform/Compare. Used for cultural comparisons (China vs. Colombia) and to break down challenges. Justification: Makes dense information digestible and interactive.
+         - Simple Bar Chart (Chart.js): Goal: Change. Visualizes the growth of the "Casa Zhang" restaurant. Justification: Adds a quantitative and visual metric of success to the qualitative narrative. The chart container is fully responsive.
+         - Character Details (HTML/JS Modals): Goal: Inform. Clicking on character names reveals more info. Justification: Adds depth to the story without cluttering the main view.
+         - All elements are implemented using standard web technologies, ensuring accessibility and responsiveness without external dependencies like SVG or Mermaid.
     -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
@@ -138,28 +138,28 @@
                         <h3 class="font-bold text-xl text-center mb-4">Aprendiendo a Comunicarse</h3>
                         <div class="flex justify-around text-center">
                             <div>
-                               <div class="text-4xl mb-2">✍️</div>
-                               <p class="font-semibold">Wei</p>
-                               <p class="text-sm text-gray-600">Aprendió en la calle, con gestos y una libreta.</p>
-                           </div>
-                           <div>
-                               <div class="text-4xl mb-2">📺</div>
-                               <p class="font-semibold">Lian</p>
-                               <p class="text-sm text-gray-600">Aprendió viendo TV y con sus vecinas.</p>
-                           </div>
+                                <div class="text-4xl mb-2">✍️</div>
+                                <p class="font-semibold">Wei</p>
+                                <p class="text-sm text-gray-600">Aprendió en la calle, con gestos y una libreta.</p>
+                            </div>
+                            <div>
+                                <div class="text-4xl mb-2">📺</div>
+                                <p class="font-semibold">Lian</p>
+                                <p class="text-sm text-gray-600">Aprendió viendo TV y con sus vecinas.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h3 class="font-bold text-xl text-center mb-4">Contraste de Costumbres</h3>
                          <div class="flex justify-around items-center text-center">
                              <div>
-                                <p class="font-semibold text-lg">China</p>
-                                <p class="text-sm text-gray-600">Vida familiar más reservada y normas de respeto estrictas.</p>
+                                 <p class="font-semibold text-lg">China</p>
+                                 <p class="text-sm text-gray-600">Vida familiar más reservada y normas de respeto estrictas.</p>
                              </div>
                              <div class="text-2xl font-bold text-[#A42A28] mx-4">↔️</div>
                              <div>
-                                <p class="font-semibold text-lg">Colombia</p>
-                                <p class="text-sm text-gray-600">Sociedad más abierta, ruidosa pero también muy cálida.</p>
+                                 <p class="font-semibold text-lg">Colombia</p>
+                                 <p class="text-sm text-gray-600">Sociedad más abierta, ruidosa pero también muy cálida.</p>
                              </div>
                          </div>
                     </div>
@@ -222,10 +222,21 @@
                 </div>
             </section>
 
+            <section id="video_historia" class="content-section">
+                <h2 class="text-2xl font-bold mb-2 text-center text-[#A42A28]">Capítulo 7: La Historia en Video</h2>
+                <p class="text-center text-gray-600 mb-6 max-w-2xl mx-auto">Un breve documental que resume el viaje, los desafíos y el legado de la familia Zhang, narrado por sus propios protagonistas.</p>
+                <div class="max-w-3xl mx-auto bg-white p-2 sm:p-4 rounded-lg shadow-xl">
+                    <video class="w-full rounded-lg" controls>
+                        <source src="La_Historia_de_la_Familia.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video. Por favor, intenta con un navegador más moderno.
+                    </video>
+                </div>
+            </section>
+
         </main>
 
         <nav class="sticky bottom-0 bg-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] w-full overflow-x-auto">
-            <div id="nav-container" class="flex justify-center items-center space-x-2 p-2 min-w-max mx-auto">
+            <div id="nav-container" class="flex justify-center items-center space-x-1 sm:space-x-2 p-2 min-w-max mx-auto">
                 <button onclick="navigateTo('inicio')" class="nav-button active text-sm px-3 py-2 rounded-md transition-colors">Inicio</button>
                 <button onclick="navigateTo('origenes')" class="nav-button text-sm px-3 py-2 rounded-md transition-colors">Orígenes</button>
                 <button onclick="navigateTo('llegada')" class="nav-button text-sm px-3 py-2 rounded-md transition-colors">Llegada</button>
@@ -233,11 +244,12 @@
                 <button onclick="navigateTo('casa_zhang')" class="nav-button text-sm px-3 py-2 rounded-md transition-colors">Casa Zhang</button>
                 <button onclick="navigateTo('identidad')" class="nav-button text-sm px-3 py-2 rounded-md transition-colors">Identidad</button>
                 <button onclick="navigateTo('legado')" class="nav-button text-sm px-3 py-2 rounded-md transition-colors">Legado</button>
+                <button onclick="navigateTo('video_historia')" class="nav-button text-sm px-3 py-2 rounded-md transition-colors">Video</button>
             </div>
         </nav>
     </div>
 
-    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden">
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
         <div class="bg-white rounded-lg shadow-2xl max-w-sm w-full p-6 text-center relative">
             <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
             <div id="modal-content"></div>
@@ -257,6 +269,12 @@
         };
 
         function navigateTo(sectionId) {
+            // Pause video if navigating away from the video section
+            const videoElement = document.querySelector('#video_historia video');
+            if (currentSection === 'video_historia' && sectionId !== 'video_historia' && !videoElement.paused) {
+                videoElement.pause();
+            }
+
             const sections = document.querySelectorAll('.content-section');
             sections.forEach(section => {
                 section.classList.remove('active');
@@ -273,14 +291,15 @@
 
             currentSection = sectionId;
 
-            if (sectionId === 'casa_zhang') {
+            if (sectionId === 'casa_zhang' && !growthChart) {
                 renderChart();
             }
         }
         
         function renderChart() {
+            // Check if chart is already rendered
             if (growthChart) {
-                growthChart.destroy();
+                return;
             }
             const ctx = document.getElementById('restaurantGrowthChart').getContext('2d');
             growthChart = new Chart(ctx, {
@@ -289,7 +308,7 @@
                     labels: ['1995: Inicio', '2010: Crecimiento', 'Hoy: Reconocimiento'],
                     datasets: [{
                         label: 'Evolución de Casa Zhang',
-                        data: [2, 6, 10],
+                        data: [2, 6, 12], // Adjusted data for better visual impact
                         backgroundColor: [
                             'rgba(164, 42, 40, 0.4)',
                             'rgba(164, 42, 40, 0.6)',
@@ -356,6 +375,7 @@
             document.getElementById('modal').classList.add('hidden');
         }
         
+        // Ensure the initial section is loaded correctly
         document.addEventListener('DOMContentLoaded', () => {
              navigateTo('inicio');
         });
